@@ -11,19 +11,17 @@ talkedRecently.add(message.author.id);
 setTimeout(() => {
   talkedRecently.delete(message.author.id)
 }, 2500);
-let sicon = message.guild.iconURL;
-let gname = message.guild.name;
 let nud = args.slice(0).join(' ');
-let role = message.mentions.roles.first() || message.guild.roles.get(nud) || message.guild.roles.find(role => role.name ===nud);
+let role = message.mentions.roles.first() || message.guild.roles.cache.get(nud) || message.guild.roles.cache.find(role => role.name === nud);
 if (!role) return message.reply('Укажите роль.')
 moment.locale('ru')
 if (role.mentionable = `false`) stats = `Нет`;
 if (role.mentionable = `true`) stats = `Да`;
-let embed = new Discord.RichEmbed()
+let embed = new Discord.MessageEmbed()
     embed.setColor(role.hexColor)
     embed.setTimestamp()
-    embed.setFooter(`${gname}`, sicon)
-    embed.setAuthor(`Информация о ${role.name}`)
+    embed.setFooter(message.guild.name, message.guild.iconURL())
+    embed.setAuthor(`Информация о роли ${role.name}`)
     embed.addField('ID', role.id, true)
     embed.addField('Участники', role.members.size, true)
     embed.addField('Позиция', role.position, true)

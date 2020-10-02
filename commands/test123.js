@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const talkedRecently = new Set();
-const Menu = require('../../files/Menu')
+const Menu = require('../files/Menu')
 
 module.exports = async function (message) {
   if (!message.channel.permissionsFor(message.member).has("SEND_MESSAGES", false)) return message.reply('Получите какую-нибудь роль для выполнения команд');

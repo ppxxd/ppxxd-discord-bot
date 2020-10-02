@@ -34,7 +34,7 @@ class ArrowMenuWithFields {
                 collected = await msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] });
             }
             catch (e) {
-                await msg.clearReactions()
+                await msg.reactions.removeAll();
                 msg.react('❌');
                 break;
             }
@@ -108,7 +108,7 @@ class ArrowMenuWithDesc {
                 collected = await msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] });
             }
             catch (e) {
-                await msg.clearReactions()
+                await msg.reactions.removeAll();
                 msg.react('❌');
                 break;
             }

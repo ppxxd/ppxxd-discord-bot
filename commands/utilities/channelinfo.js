@@ -17,13 +17,14 @@ if (message.mentions.channels.first()) {
   guildChannel = message.channel;
 }
 moment.locale('ru')
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed() 
     embed.setColor(message.member.displayHexColor) 
-    embed.setAuthor(`Информация о канале`,)
+    embed.setAuthor(`Информация о канале ` + "#" + guildChannel.name)
     embed.setTimestamp()
-    embed.setFooter(`#${guildChannel.name}`, "")
-    embed.addField("ID:", guildChannel.id, true)
-    embed.addField("Название:", guildChannel.name, true)
-    embed.addField('Категория:', guildChannel.parent, true)
-    embed.addField("Cоздан:", `${moment.utc(guildChannel.createdAt).format('MMMM Do YYYY, HH:mm:ss')}`)
+    // Вставить туда через новый скаченный модуль момент жс которйы скорее всего есть в закладках в браузере
+   //  embed.setFooter(`Создан 3 года назад....`, `${message.guild.iconURL()}`)
+    embed.addField("ID", guildChannel.id, true)
+    embed.addField("Название", "#" + guildChannel.name, true)
+    embed.addField('Категория', `${guildChannel.parent ? guildChannel.parent : '󠇰'}`, true)
+    embed.addField("Cоздан", `${moment.utc(guildChannel.createdAt).format('MMMM Do YYYY, HH:mm:ss')}`)
     message.channel.send({embed})}

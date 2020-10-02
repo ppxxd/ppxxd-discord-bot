@@ -5,28 +5,27 @@ let ment = message.mentions.members.first()
 
 
 if (args[0] && !ment){
-let id = client.users.find('username', args[0]).id
-let member1 = message.member.guild.members.get(id);
+  let id = client.users.cache.find(user1 => user1.username == args[0]).id
+let member1 = message.member.guild.members.cache.get(id);
     if (!member1)
       return message.reply("Слапни пользователя для начала.");
     if (!member1.kickable)
       return message.reply("Невозможно кикнуть участника с вышестоящей ролью!");
-      let reason = args.slice(1).join(' ');
-if (!reason) reason = "Не указана";  
-      member1.kick(reason)
-      let sicon = message.guild.iconURL;
+      let reasonkick = args[1]
+    if (!reasonkick) reasonkick = "Не указана"; 
+    member1.kick(reasonkick)
+      let sicon = message.guild.iconURL();
       let gname = message.guild.name;
-      let admin = message.author
-        let embed = new Discord.RichEmbed()
+        let embed = new Discord.MessageEmbed()
         embed.setColor('#0e0d0d')
         embed.setFooter(`${gname}`, `${sicon}`)
         embed.setAuthor(`${message.author.username} кикнул ${member1.user.username}`)
         embed.setTimestamp()
         embed.addField("Пользователь", member1, true)
         embed.addField("Администратор", message.member, true)
-        embed.addField("Причина", reason)
+        embed.addField("Причина", reasonkick)
         message.channel.send({ embed })
-        member1.send(`<a:finger_wave:576175222957539328> | Вы были кикнуты с сервера **${gname}** по причине: **${reason}**. Кикнул: ${admin}`)}
+        }
       
         if (ment ){
           let member = message.mentions.members.first()
@@ -34,22 +33,22 @@ if (!reason) reason = "Не указана";
                   return message.reply("Слапни пользователя для начала.");
                 if (!member.kickable)
                   return message.reply("Невозможно кикнуть участника с вышестоящей ролью!");
-                  let reason = args.slice(1).join(' ');
-      if (!reason) reason = "Не указана";   
-              member.kick(reason)
-              let sicon = message.guild.iconURL;
+                  let reasonkick = args[1]
+    if (!reasonkick) reasonkick = "Не указана"; 
+    member.kick(reasonkick)
+              let sicon = message.guild.iconURL();
               let gname = message.guild.name;
-              let admin = message.author
-                let embed = new Discord.RichEmbed()
+              
+                let embed = new Discord.MessageEmbed()
                 embed.setColor('#0e0d0d')
                 embed.setFooter(`${gname}`, `${sicon}`)
                 embed.setAuthor(`${message.author.username} кикнул ${member.user.username}`)
                 embed.setTimestamp()
                 embed.addField("Пользователь", member, true)
                 embed.addField("Администратор", message.member, true)
-                embed.addField("Причина", reason)
+                embed.addField("Причина", reasonkick)
                 message.channel.send({ embed })
-                member.send(`<a:finger_wave:576175222957539328> | Вы были кикнуты с сервера **${gname}** по причине: **${reason}**. Кикнул: ${admin}`)}    
+                }    
       
       
       

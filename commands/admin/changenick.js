@@ -6,12 +6,13 @@ module.exports =  async function(message,args){ if (!message.channel.permissions
       return message.reply("Слапни жертву для начала.");
     message.delete()
     member.setNickname(nuck)
-    let sicon = message.guild.iconURL;
+    let sicon = message.guild.iconURL();
     let gname = message.guild.name;
-    let embed = new Discord.RichEmbed()
+   let embed = new Discord.MessageEmbed()
     embed.setColor('#0e0d0d')
     embed.setFooter(`${gname}`, `${sicon}`)
     embed.setAuthor(`Изменение ника`)
     embed.setTimestamp()
     embed.setDescription(`<@!${message.author.id}> изменил ник <@!${member.id}> на **${nuck}**`)
-    message.channel.send({embed})}
+message.channel.send({embed})
+}

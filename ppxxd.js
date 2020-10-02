@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("ready", () => {
-  console.log(`Бот запущен. ${client.users.size} участников, в ${client.channels.size} каналах на ${client.guilds.size} серваках.`);
+  console.log(`Бот запущен. ${client.users.cache.size} участников, в ${client.channels.cache.size} каналах на ${client.guilds.cache.size} серваках.`);
   client.user.setActivity("Навальный 2024", {
     type: "WATCHING",
     url: "https://www.twitch.tv/monstercat"
@@ -39,13 +39,12 @@ client.on("message", async message => {
   if (command == 'help') require(__dirname + '/commands/help.js')(message,args,client);
   if (command == 'test') require(__dirname + '/commands/test.js')(message,args,client);
   if (command == 'te1') require(__dirname + '/commands/testictuion.js')(message,args,client);
-  if (command == 'info') require(__dirname + '/commands/info.js')(message);
+  if (command == 'te2') require(__dirname + '/commands/test123.js')(message);
 
 // секретки  
   if (command == 'sml') require(__dirname + '/commands/secret/sml.js')(message);
-  if (command == 'resetallnicks') require(__dirname + '/commands/secret/resetallnicks.js')(message,args);
+  if (command == 'resetallnicks') require(__dirname + '/commands/secret/resetallnicks.js')(message);
   if (command == 'allnicks') require(__dirname + '/commands/secret/allnicks.js')(message,args);
-  if (command == 'meibibaby') require(__dirname + '/commands/secret/meibibaby.js')(message);
   if (command == 'stats') require(__dirname + '/commands/secret/stats.js')(message,client);
   if (command == 'colors') require(__dirname + '/commands/secret/colors.js')(message,client);
 
@@ -78,7 +77,6 @@ client.on("message", async message => {
 if (command == 'poxyi') require(__dirname + '/commands/memes/poxyi.js')(message);
 if (command == 'flek$$') require(__dirname + '/commands/memes/flek$$.js')(message);
 if (command == 'firstly') require(__dirname + '/commands/memes/firstly.js')(message);
-if (command == 'whoischop1k') require(__dirname + '/commands/memes/whoischop1k.js')(message);
 if (command == 'question') require(__dirname + '/commands/memes/question.js')(message);
 if (command == 'anime') require(__dirname + '/commands/memes/anime.js')(message);
 

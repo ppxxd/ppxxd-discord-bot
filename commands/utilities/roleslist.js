@@ -13,7 +13,7 @@ module.exports = async function (message) {
   setTimeout(() => {
     talkedRecently.delete(message.author.id)
   }, 2500);
-  let roles = message.guild.roles.array();
+  let roles = message.guild.roles.cache.array();
 var fields = [];
 var temparr = []
 

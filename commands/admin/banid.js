@@ -3,26 +3,24 @@ module.exports =  async function(message,args,client){ if (!message.channel.perm
 
 if (!args[0]) return message.reply('Укажите ID пользователя')
   
-let sicon = message.guild.iconURL;
+let sicon = message.guild.iconURL();
 let gname = message.guild.name;
-let admin = message.author 
 let user = args[0];
-let member = message.member.guild.members.get(user)
+
 
 let reason = args.slice(1).join(' ');
 if (!reason) reason = "Не указана";   
-//message.guild.ban(user)
+    message.guild.members.ban(user)
     message.delete()
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     embed.setColor('#0e0d0d')
     embed.setFooter(`${gname}`, `${sicon}`)
     embed.setAuthor(`${message.author.username} забанил пользователя`)
     embed.setTimestamp()
     embed.addField("Пользователь", `<@!${user}>`, true)
     embed.addField("Администратор", message.member, true)
-   embed.addField("Причина", reason)
-    message.channel.send({ embed })
-  member.send(`<a:finger_wave:576175222957539328> | Вы были забанены на сервере **${gname}** по причине: **${reason}**. Забанил: ${admin}`)}
+    embed.addField("Причина", reason)
+    message.channel.send({embed})}
 
 
 

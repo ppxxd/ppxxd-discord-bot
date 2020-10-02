@@ -8,11 +8,11 @@ message.channel.send({embed: {
       name: 'Статистика ppxxd',
       icon_url: user
     },
-  description: "```" + `yaml\nЗадержка: ${Math.round(client.ping)} ms\nСерверов: ${client.guilds.size}\nКаналов: ${client.channels.size}\nУчастников: ${client.users.size}` + "```",
+  description: "```" + `yaml\nЗадержка: ${Math.round(client.ws.ping)} ms\nСерверов: ${client.guilds.cache.size}\nКаналов: ${client.channels.cache.size}\nУчастников: ${client.users.cache.size}` + "```",
     timestamp: new Date(),
     footer: {
-      icon_url: '',
-      text: 'In' + ' ' + message.guild.name + ' ' + 'guild'
+      icon_url: message.guild.iconURL(),
+      text: message.guild.name
     }
   }})
 }

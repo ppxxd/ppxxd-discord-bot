@@ -4,53 +4,47 @@ module.exports =  async function(message,args,client){ if (!message.channel.perm
 let ment = message.mentions.members.first()
 
 if (args[0] && !ment){
-  let sicon = message.guild.iconURL;
-let gname = message.guild.name;
-let admin = message.author 
-let id = client.users.find('username', args[0]).id
-let member1 = message.member.guild.members.get(id);
+let id = client.users.cache.find(user1 => user1.username == args[0]).id
+let member1 = message.member.guild.members.cache.get(id);
     if (!member1)
       return message.reply("Слапни пользователя для начала.");
     if (!member1.bannable)
       return message.reply("Невозможно забанить участника с вышестоящей ролью!");
-      let reason = args.slice(1).join(' ');
-if (!reason) reason = "Не указана";   
-member1.ban(reason)
+      let reasonban = args[1]
+    if (!reasonban) reasonban = "Не указана";
+message.guild.members.ban(member1, { reason: reasonban})
     message.delete()
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     embed.setColor('#0e0d0d')
-    embed.setFooter(`${gname}`, `${sicon}`)
+    embed.setFooter(`${message.guild.name}`, `${message.guild.iconURL()}`)
     embed.setAuthor(`${message.author.username} забанил ${member1.user.username}`)
     embed.setTimestamp()
     embed.addField("Пользователь", member1, true)
     embed.addField("Администратор", message.member, true)
-    embed.addField("Причина", reason)
+    embed.addField("Причина", reasonban)
     message.channel.send({ embed })
-    member1.send(`<a:finger_wave:576175222957539328> | Вы были забанены на сервере **${gname}** по причине: **${reason}**. Забанил: ${admin}`)}
+    }
 
    if (ment ){
     let member = message.mentions.members.first()
-    let sicon = message.guild.iconURL;
-    let gname = message.guild.name;
-    let admin = message.author 
           if (!member)
             return message.reply("Слапни пользователя для начала.");
           if (!member.bannable)
             return message.reply("Невозможно забанить участника с вышестоящей ролью!");
-            let reason = args.slice(1).join(' ');
-if (!reason) reason = "Не указана";   
-      member.ban(reason)
+            let reasonban = args[1]
+            if (!reasonban) reasonban = "Не указана";  
+            message.guild.members.ban(member, { reason: reasonban})
           message.delete()
-          let embed = new Discord.RichEmbed()
+          let embed = new Discord.MessageEmbed()
           embed.setColor('#0e0d0d')
-          embed.setFooter(`${gname}`, `${sicon}`)
+          embed.setFooter(`${message.guild.name}`, `${message.guild.iconURL()}`)
           embed.setAuthor(`${message.author.username} забанил ${member.user.username}`)
           embed.setTimestamp()
           embed.addField("Пользователь", member, true)
           embed.addField("Администратор", message.member, true)
           embed.addField("Причина", reason)
           message.channel.send({ embed })
-          member.send(`<a:finger_wave:576175222957539328> | Вы были забанены на сервере **${gname}** по причине: **${reason}**. Забанил: ${admin}`)}
+         }
   
   
   

@@ -15,19 +15,18 @@ if (!args[0] && !ment) return message.reply("Упомянуйте юзера и�
 
 
   if (args[0] && !ment){
-    let admin = message.author
-    let id = client.users.find('username', args[0]).id
-    let rmember = message.member.guild.members.get(id);
-    let takenroles = rmember.roles
+    let id = client.users.cache.find(user1 => user1.username == args[0]).id
+    let rmember = message.member.guild.members.cache.get(id);
+    let takenroles = rmember.roles.cache
     let reason = args[2]
     if (!reason) reason = "Не указана";
     
-const rolejail = message.guild.roles.find('name', "Замученный") || message.guild.roles.find('name', "Muted")
-rmember.removeRoles(takenroles)
+const rolejail = message.guild.roles.cache.find(role1 => role1.name == "Замученный") || message.guild.roles.cache.find('name', "Muted")
+rmember.roles.remove(takenroles)
 setTimeout(() => {
- rmember.addRoles(rolejail.id)
+ rmember.roles.add(rolejail.id)
  }, 1000)
- let sicon = message.guild.iconURL;
+ let sicon = message.guild.iconURL();
  let gname = message.guild.name;
 
  let timer = args[1]
@@ -65,7 +64,7 @@ if (timerinjail3+timerinjail8 == 0) {var timemin = ""} else {var timemin = timer
 if (timerinjail4+timerinjail9 == 0) {var timehou = ""} else {var timehou = timerinjail4+timerinjail9 + " ч "}
 if (timerinjail5 == 0) {var timeday = ""} else {var timeday = timerinjail5 + " дн "}
 if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда"} else {var timerd = timeday + timehou + timemin + timesec}
-    let embed = new Discord.RichEmbed()
+    let embed = new Discord.MessageEmbed()
     embed.setColor('#0e0d0d')
     embed.setFooter(`${gname}`, `${sicon}`)
     embed.setAuthor(`${message.author.username} замутил ${rmember.user.username}`)
@@ -75,11 +74,10 @@ if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда
     embed.addField("Длительность", timerd, true)
     embed.addField("Причина", reason, true)
     message.channel.send({ embed })
-    rmember.send(`<a:finger_wave:576175222957539328> | Вы были замучены на сервере **${gname}** на **${timerd}** по причине: **${reason}**. Замутил: ${admin}`)
         setTimeout(() => {
-          rmember.removeRole(rolejail.id)
-          rmember.addRoles(takenroles)
-          rmember.removeRole(rolejail.id)
+          rmember.roles.remove(rolejail.id)
+          rmember.roles.add(takenroles)
+          rmember.roles.remove(rolejail.id)
         }, timer)}
  
  
@@ -100,17 +98,16 @@ if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда
 
 
   if (ment){
-    let admin = message.author
         let rmember = message.mentions.members.first()
-    let takenroles = rmember.roles
+    let takenroles = rmember.roles.cache
     let reason = args[2]
     if (!reason) reason = "Не указана";
-    const rolejail = message.guild.roles.find('name', "Замученный") || message.guild.roles.find('name', "Muted")
-    rmember.removeRoles(takenroles)
+    const rolejail = message.guild.roles.cache.find(role1 => role1.name == "Замученный") || message.guild.roles.cache.find('name', "Muted")
+    rmember.roles.remove(takenroles)
        setTimeout(() => {
-        rmember.addRoles(rolejail.id)
+        rmember.roles.add(rolejail.id)
         }, 1000)
-        let sicon = message.guild.iconURL;
+        let sicon = message.guild.iconURL();
         let gname = message.guild.name;
 
         let timer = args[1]
@@ -147,7 +144,7 @@ if (timerinjail3+timerinjail8 == 0) {var timemin = ""} else {var timemin = timer
 if (timerinjail4+timerinjail9 == 0) {var timehou = ""} else {var timehou = timerinjail4+timerinjail9 + " ч "}
 if (timerinjail5 == 0) {var timeday = ""} else {var timeday = timerinjail5 + " дн "}
 if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда"} else {var timerd = timeday + timehou + timemin + timesec}
-        let embed = new Discord.RichEmbed()
+        let embed = new Discord.MessageEmbed()
         embed.setColor('#0e0d0d')
         embed.setFooter(`${gname}`, `${sicon}`)
         embed.setAuthor(`${message.author.username} замутил ${rmember.user.username}`)
@@ -157,11 +154,10 @@ if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда
         embed.addField("Длительность", timerd, true)
         embed.addField("Причина", reason, true)
         message.channel.send({ embed })
-        rmember.send(`<a:finger_wave:576175222957539328> | Вы были замучены на сервере **${gname}** на **${timerd}** по причине: **${reason}**. Замутил: ${admin}`)
        setTimeout(() => {
-        rmember.removeRole(rolejail.id)
-        rmember.addRoles(takenroles)
-        rmember.removeRole(rolejail.id)
+        rmember.roles.remove(rolejail.id)
+        rmember.roles.add(takenroles)
+        rmember.roles.remove(rolejail.id)
         }, timer)}
 
   
