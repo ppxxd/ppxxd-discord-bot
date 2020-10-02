@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("ready", () => {
-  console.log(`Бот запущен. ${client.users.cache.size} участников, в ${client.channels.cache.size} каналах на ${client.guilds.cache.size} серваках.`);
+  console.log(`\nБот запущен.\nСерверов: ${client.guilds.cache.size}\nКаналов: ${client.channels.cache.size}\nУчастников: ${client.users.cache.size}`);
   client.user.setActivity("Навальный 2024", {
     type: "WATCHING",
     url: "https://www.twitch.tv/monstercat"
@@ -69,6 +69,8 @@ client.on("message", async message => {
   if (command === "avatar") require(__dirname + '/commands/utilities/avatar.js')(message,args,client);
   if (command == 'roleslist') require(__dirname + '/commands/utilities/roleslist.js')(message);
   if (command == 'emojis') require(__dirname + '/commands/utilities/emojis.js')(message);
+  if (command == 'ping') require(__dirname + '/commands/utilities/ping.js')(message,client);
+
 
 
 

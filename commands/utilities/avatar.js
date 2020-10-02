@@ -21,7 +21,7 @@ if (!args[0] && !ment) {
    embed.setTitle(`${user.tag}`)
    embed.setColor(member.displayColor)
    embed.setDescription(`[Сcылка](${user.displayAvatarURL()})`)
-     embed.setImage(user.avatarURL());
+     embed.setImage(user.avatarURL({ dynamic: true, format: 'png', size: 1024 }));
      message.channel.send({embed})}
 
 //Если есть аргументы без слапа
@@ -33,7 +33,7 @@ let member = message.member.guild.members.cache.get(id)
   embed.setTitle(`${user.username}#${user.discriminator}`)
   embed.setColor(member.displayColor)
   embed.setDescription(`[Сcылка](${user.displayAvatarURL()})`)
-    embed.setImage(user.avatarURL());
+    embed.setImage(user.avatarURL({ dynamic: true, format: 'png', size: 1024 }));
     message.channel.send({embed})}
 
 //Если есть слап без аргументов
@@ -44,6 +44,6 @@ if (ment) {
      embed.setTitle(`${user.username}#${user.discriminator}`)
    embed.setColor(member.displayColor)
    embed.setDescription(`[Сcылка](${user.displayAvatarURL()})`)
-     embed.setImage(user.avatarURL());
+     embed.setImage(user.avatarURL({ dynamic: true, format: 'png', size: 1024 }));
      message.channel.send({embed})}    
 }
