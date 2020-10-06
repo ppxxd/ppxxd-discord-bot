@@ -5,7 +5,7 @@ let sicon = message.guild.iconURL();
 let gname = message.guild.name;
 let reason = args.slice(1).join(' ');
 if (!reason) reason = "Не указана";
-
+if (!args[0] && !ment) return message.reply("Упомянуйте юзера или введите его никнейм для дальнейших действий. Ник должен быть **полным** и **c учетом регистра**.")
 if (args[0] && !ment){
   let id = client.users.cache.find(user1 => user1.username == args).id
   let rmember = message.member.guild.members.cache.get(id);

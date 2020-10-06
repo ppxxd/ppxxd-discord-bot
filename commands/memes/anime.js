@@ -1,4 +1,3 @@
-const Discord = require("discord.js");
 const talkedRecently = new Set();
 module.exports =  async function(message){ if (!message.channel.permissionsFor(message.member).has("SEND_MESSAGES", false)) return message.reply('Получите какую-нибудь роль для выполнения команд.')
 if (talkedRecently.has(message.author.id))

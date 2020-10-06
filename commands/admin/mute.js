@@ -3,7 +3,7 @@ module.exports =  async function(message,args,client){
   if (!message.channel.permissionsFor(message.member).has("MANAGE_ROLES", false)) return message.reply('вы не администратор.');
   let ment = message.mentions.members.first()
  
-if (!args[0] && !ment) return message.reply("Упомянуйте юзера или введите его никнейм для дальнейших действий!")
+if (!args[0] && !ment) return message.reply("Упомянуйте юзера или введите его никнейм для дальнейших действий. Ник должен быть **полным** и **c учетом регистра**.")
 
 
 
@@ -14,7 +14,7 @@ if (!args[0] && !ment) return message.reply("Упомянуйте юзера и�
 
 
 
-  if (args[0] && !ment){
+  if (args[0] && !ment){try{
     let id = client.users.cache.find(user1 => user1.username == args[0]).id
     let rmember = message.member.guild.members.cache.get(id);
     let takenroles = rmember.roles.cache
@@ -78,7 +78,23 @@ if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда
           rmember.roles.remove(rolejail.id)
           rmember.roles.add(takenroles)
           rmember.roles.remove(rolejail.id)
-        }, timer)}
+          message.channel.send({embed: {
+            color: 0x0e0d0d,
+            author: {name: `${rmember.user.username} был размучен`},
+            timestamp: new Date(),
+            fields:[{ name: "Пользователь",
+                      value: rmember, 
+                      inline: true},
+                    { name: "Длительность",
+                      value: timerd, 
+                      inline: true},
+                    { name: "Замучен по причине",
+                      value: reason, 
+                      inline: true}],
+            footer: {text: gname,icon_url: sicon,} }})
+          }, timer)
+        }
+        catch (err) {message.reply('Ник должен быть **полным** и **c учетом регистра**.')}}
  
  
 
@@ -158,6 +174,20 @@ if (timeday + timehou + timemin + timesec == "") {var timerd = "Навсегда
         rmember.roles.remove(rolejail.id)
         rmember.roles.add(takenroles)
         rmember.roles.remove(rolejail.id)
+        message.channel.send({embed: {
+          color: 0x0e0d0d,
+          author: {name: `${rmember.user.username} был размучен`},
+          timestamp: new Date(),
+          fields:[{ name: "Пользователь",
+                    value: rmember, 
+                    inline: true},
+                  { name: "Длительность",
+                    value: timerd, 
+                    inline: true},
+                  { name: "Замучен по причине",
+                    value: reason, 
+                    inline: true}],
+          footer: {text: gname,icon_url: sicon,} }})
         }, timer)}
 
   

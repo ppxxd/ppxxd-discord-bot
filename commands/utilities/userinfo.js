@@ -33,14 +33,14 @@ if (!args[0] & !ment) {
       embed.addField("ID", user.id, true)
       embed.addField("Упоминание","<" + "@" + user.id + ">", true)
       embed.addField("Статус", `${stats}`, true)
-      embed.addField("Играет в", `${user.presence.game ? user.presence.game.name : '	󠇰	󠇰'}`, true)
+      embed.addField("Играет в", `${user.presence.activities.toString() ? user.presence.activities.toString() : '	󠇰	󠇰'}`, true)
       embed.addField("Аккаунт создан", `${moment.utc(user.createdAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
-      embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt.toString()).format('MMMM Do YYYY, HH:mm:ss')}`,true)
+      embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
       embed.addField("Роли", member.roles.cache.map(r => `${r}`).join('󠇰󠇰	󠇰󠇰'),true);
       message.channel.send({embed})}
 
-  if (args && !ment) {
-    let id = client.users.cache.find(user1 => user1.username == args).id
+  if (args[0] && !ment) {try{
+    let id = client.users.cache.find(user1 => user1.username == args[0]).id 
       let member = message.member.guild.members.cache.get(id);
       let user = member.user    
     // var time = moment.utc(user.createdAt).format('YYYYMMDD');
@@ -55,17 +55,18 @@ if (!args[0] & !ment) {
           embed.setColor(member.displayHexColor)
           embed.setThumbnail(`${user.avatarURL()}`)
           embed.setAuthor(`Информация о ${user.username}#${user.discriminator}`)
-          embed.addField("Никнейм", `${user.username}#${user.discriminator}`, true)
+          embed.addField("Никнейм", `${user.username}`, true)
           embed.addField("ID", user.id, true)
           embed.addField("Упоминание","<" + "@" + user.id + ">", true)
           embed.addField("Статус", `${stats}`, true)
-          embed.addField("Играет в", `${user.presence.game ? user.presence.game.name : '	󠇰	󠇰'}`, true)
+          embed.addField("Играет в", `${user.presence.activities.toString() ? user.presence.activities.toString() : '	󠇰	󠇰'}`, true)
           embed.addField("Аккаунт создан", `${moment.utc(user.createdAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
-          embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt.toString()).format('MMMM Do YYYY, HH:mm:ss')}`,true)
+          embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
           embed.addField("Роли", member.roles.cache.map(r => `${r}`).join('󠇰󠇰	󠇰󠇰'),true);
           message.channel.send({embed})}
+          catch (err) {message.reply('Ник должен быть **полным** и **c учетом регистра**.')}}
 
-if (ment) {    
+if (ment && !args[0]) {    
   let member = message.mentions.members.first()
   const user = member.user;
 //var time = moment.utc(user.createdAt).format('YYYYMMDD');
@@ -80,13 +81,13 @@ var embed = new Discord.MessageEmbed()
     embed.setColor(member.displayColor)
     embed.setThumbnail(`${user.avatarURL()}`)
     embed.setAuthor(`Информация о ${user.username}#${user.discriminator}`)
-    embed.addField("Никнейм", `${user.username}#${user.discriminator}`, true)
+    embed.addField("Никнейм", `${user.username}`, true)
     embed.addField("ID", user.id, true)
     embed.addField("Упоминание","<" + "@" + user.id + ">", true)
     embed.addField("Статус", `${stats}`, true)
-    embed.addField("Играет в", `${user.presence.game ? user.presence.game.name : '	󠇰	󠇰'}`, true)
+    embed.addField("Играет в", `${user.presence.activities.toString() ? user.presence.activities.toString() : '	󠇰	󠇰'}`, true)
     embed.addField("Аккаунт создан", `${moment.utc(user.createdAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
-    embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt.toString()).format('MMMM Do YYYY, HH:mm:ss')}`,true)
+    embed.addField("Вошел на сервер", `${moment.utc(member.joinedAt).format('MMMM Do YYYY, HH:mm:ss')}`,true)
     embed.addField("Роли", member.roles.cache.map(r => `${r}`).join('󠇰󠇰	󠇰󠇰'),true);
     message.channel.send({embed})}
  

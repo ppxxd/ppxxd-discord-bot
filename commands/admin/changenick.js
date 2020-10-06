@@ -3,7 +3,7 @@ module.exports =  async function(message,args){ if (!message.channel.permissions
     let member = message.mentions.members.first()
     let nuck = args.slice(1).join(' ');
     if (!member)
-      return message.reply("Слапни жертву для начала.");
+      return message.reply("Упомянуйте юзера для дальнейших действий.");
     message.delete()
     member.setNickname(nuck)
     let sicon = message.guild.iconURL();

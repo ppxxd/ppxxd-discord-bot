@@ -2,8 +2,9 @@ const Discord = require("discord.js");
 module.exports =  async function(message,args,client){ if (!message.channel.permissionsFor(message.member).has("ADMINISTRATOR", false)) return message.reply('вы не администратор.');
 
 let ment = message.mentions.members.first()
-
-if (args[0] && !ment){
+if (!args[0] && !ment) return message.reply("Упомянуйте юзера или введите его никнейм для дальнейших действий. Ник должен быть **полным** и **c учетом регистра**.")
+if (args[0] && !ment){ try 
+  {
 let id = client.users.cache.find(user1 => user1.username == args[0]).id
 let member1 = message.member.guild.members.cache.get(id);
     if (!member1)
@@ -22,8 +23,10 @@ message.guild.members.ban(member1, { reason: reasonban})
     embed.addField("Пользователь", member1, true)
     embed.addField("Администратор", message.member, true)
     embed.addField("Причина", reasonban)
-    message.channel.send({ embed })
-    }
+    message.channel.send({ embed })}
+    catch (err) {message.reply('Ник должен быть **полным** и **c учетом регистра**.')}
+  }
+
 
    if (ment ){
     let member = message.mentions.members.first()
