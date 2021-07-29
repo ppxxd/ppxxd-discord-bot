@@ -4,7 +4,7 @@ const config = require("./config.json");
 
 client.on("ready", () => {
   console.log(`\nБот запущен.\nСерверов: ${client.guilds.cache.size}\nКаналов: ${client.channels.cache.size}\nУчастников: ${client.users.cache.size}`);
-  client.user.setActivity("Навальный 2024", {
+  client.user.setActivity("~help", {
     type: "WATCHING",
     url: "https://www.twitch.tv/monstercat"
   })
