@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/admin/clear.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/clear.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/admin/say.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/say.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/admin/unban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/unban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/secret/allnicks.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/allnicks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/secret/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/secret/resetallnicks.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/resetallnicks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/secret/sml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/secret/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/test1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/test123.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/test2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/testictuion.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/test3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/avatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/channelinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/channelinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/emojis.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/emojis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/ping.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/ping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/roleinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/roleinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/rolemembers.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/rolemembers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/roleslist.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/roleslist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/serverinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/serverinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/utilities/userinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/utilities/userinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppxxd.js" beforeDir="false" afterPath="$PROJECT_DIR$/ppxxd.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commands/utilities/userinfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/commands/test1.js" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/commands/utilities/userinfo.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/commands/secret/allnicks.js" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/commands/secret/stats.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/commands/admin/clear.js" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/commands/utilities/avatar.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/commands/utilities/channelinfo.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1491" />
     <option name="y" value="56" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
+  </component>
+  <component name="ProjectId" id="25FIWdXoRkCpv9vClHBQxnEGEDE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -70,22 +103,28 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="ppxxd.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/ppxxd.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Node.js.ppxxd.js" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -96,6 +135,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552868128739</updated>
+      <workItem from="1645116445324" duration="9127000" />
+      <workItem from="1645358961878" duration="16198000" />
+      <workItem from="1645431445633" duration="2394000" />
+      <workItem from="1646333008106" duration="9000" />
+      <workItem from="1652903018551" duration="151000" />
     </task>
     <servers />
   </component>
@@ -130,8 +174,23 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.js" />

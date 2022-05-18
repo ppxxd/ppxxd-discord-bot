@@ -1,24 +1,21 @@
 const Discord = require("discord.js");
 const talkedRecently = new Set();
 const Menu = require('../../files/Menu')
-
-module.exports = async function (message, args) {
-  if (!message.channel.permissionsFor(message.member).has("SEND_MESSAGES", false)) return message.reply('Получите какую-нибудь роль для выполнения команд');
+module.exports = async function (message, args)
+{
   if (talkedRecently.has(message.author.id))
     return message.reply('Подождите 2 секунды пожалуйста.')
-      .then(message => {
-        message.delete(2500)
-      });;
+        .then(message => {message.delete(2500)});
   talkedRecently.add(message.author.id);
-  setTimeout(() => {
-    talkedRecently.delete(message.author.id)
-  }, 2500);
-  let nud = args.slice(0).join(' ');
-  let role = message.mentions.roles.first() || message.guild.roles.get(nud) || message.guild.roles.find(role => role.name === nud)
-  if (!role) return message.reply('Укажите роль.')
-let members = role.members.array();
-var fields = [];
-var temparr = []
+  setTimeout(() => {talkedRecently.delete(message.author.id)}, 2500);
+
+  let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) || message.guild.roles.cache.find(role => role.name === args[0]);
+  if (!role)
+    return message.reply('Укажите роль.');
+
+  let members = role.members.array();
+  var fields = [];
+  var temparr = [];
 
 for (i = 0; i < members.length; i++) {
   temparr.push(

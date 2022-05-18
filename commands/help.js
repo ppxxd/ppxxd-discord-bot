@@ -1,19 +1,21 @@
 const Discord = require("discord.js");
 const talkedRecently = new Set();
-module.exports =  async function(message,args, client){if (!message.channel.permissionsFor(message.member).has("SEND_MESSAGES", false)) return message.reply('Получите какую-нибудь роль для выполнения команд.');
-if (talkedRecently.has(message.author.id))
-  return message.reply('Подождите 2 секунды пожалуйста.')
-  .then(message => {
-    message.delete(2500)
-  });;
-talkedRecently.add(message.author.id);
-setTimeout(() => {
-  talkedRecently.delete(message.author.id)
-}, 2500)
-let category = args.slice(0).join(' ');
-let sicon = message.guild.iconURL;
-let gname = message.guild.name;
-const user = client.user.avatarURL
+module.exports =  async function(message,args, client)
+{
+  if (!message.channel.permissionsFor(message.member).has("SEND_MESSAGES", false))
+    return message.reply('Получите какую-нибудь роль для выполнения команд.');
+
+  if (talkedRecently.has(message.author.id))
+    return message.reply('Подождите 2 секунды пожалуйста.')
+        .then(message => {message.delete(2500)});;
+  talkedRecently.add(message.author.id);
+  setTimeout(() => {talkedRecently.delete(message.author.id)}, 2500);
+
+
+  let category = args.slice(0).join(' ');
+  let sicon = message.guild.iconURL();
+  let gname = message.guild.name;
+  const user = client.user.avatarURL()
 
 if (!category) return message.channel.send({embed: {
   color: message.member.displayColor,
@@ -183,10 +185,6 @@ if (category == "secret" && message.author.id == "219483494588350465") return me
     {
       name: "~meibibaby",
       value: "`Лучше всех на свете`"
-    },
-    {
-      name: "~sml",
-      value: "`Создает инвайт на сервер.`"
     },
     {
       name: "~stats",

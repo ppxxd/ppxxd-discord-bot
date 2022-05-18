@@ -1,8 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-
+//https://discord.com/oauth2/authorize?client_id=535798550181969920&permissions=0&scope=bot%20applications.commands
 client.on("ready", () => {
+  { ws: { intents: Discord.Intents.ALL } }
   console.log(`\nБот запущен.\nСерверов: ${client.guilds.cache.size}\nКаналов: ${client.channels.cache.size}\nУчастников: ${client.users.cache.size}`);
   client.user.setActivity("~help", {
     type: "WATCHING",
@@ -37,16 +38,17 @@ client.on("message", async message => {
 
 //  Общие команды:
   if (command == 'help') require(__dirname + '/commands/help.js')(message,args,client);
-  if (command == 'test') require(__dirname + '/commands/test.js')(message,args,client);
-  if (command == 'te1') require(__dirname + '/commands/testictuion.js')(message,args,client);
-  if (command == 'te2') require(__dirname + '/commands/test123.js')(message);
+  if (command == 'test1') require(__dirname + '/commands/test1.js')(message,args,client);
+  if (command == 'test2') require(__dirname + '/commands/test2.js')(message,args,client);
+  if (command == 'test3') require(__dirname + '/commands/test3.js')(message);
 
-// секретки  
-  if (command == 'sml') require(__dirname + '/commands/secret/sml.js')(message);
+// Секретное (Не нужное обществу):
   if (command == 'resetallnicks') require(__dirname + '/commands/secret/resetallnicks.js')(message);
   if (command == 'allnicks') require(__dirname + '/commands/secret/allnicks.js')(message,args);
   if (command == 'stats') require(__dirname + '/commands/secret/stats.js')(message,client);
   if (command == 'colors') require(__dirname + '/commands/secret/colors.js')(message,client);
+  if (command == 'serverslist') require(__dirname + '/commands/secret/serverslist.js')(message,client);
+  if (command == 'leavethis') require(__dirname + '/commands/secret/leavetheserver.js')(message,client,args);
 
 // Админские команды:
   if (command === "say") require(__dirname + '/commands/admin/say.js')(message,args);
@@ -54,28 +56,23 @@ client.on("message", async message => {
   if (command == "kick") require(__dirname + '/commands/admin/kick.js')(message,args,client);
   if (command === "ban") require(__dirname + '/commands/admin/ban.js')(message,args,client);
   if (command === "banid") require(__dirname + '/commands/admin/banid.js')(message,args,client);
-  if (command === "unban") require(__dirname + '/commands/admin/unban.js')(message,args,client);
+  if (command === "unban") require(__dirname + '/commands/admin/unban.js')(message,args);
   if (command === "clear") require(__dirname + '/commands/admin/clear.js')(message,args);
   if (command === "mute") require(__dirname + '/commands/admin/mute.js')(message,args,client);
   if (command === "unmute") require(__dirname + '/commands/admin/unmute.js')(message,args,client);
-  
 
 // Утилиты:
   if (command === "userinfo") require(__dirname + '/commands/utilities/userinfo.js')(message,args,client);
   if (command === "roleinfo") require(__dirname + '/commands/utilities/roleinfo.js')(message,args);
   if (command === "rolemembers") require(__dirname + '/commands/utilities/rolemembers.js')(message,args);
   if (command === "serverinfo") require(__dirname + '/commands/utilities/serverinfo.js')(message);
-  if (command === "channelinfo") require(__dirname + '/commands/utilities/channelinfo.js')(message,args);
+  if (command === "channelinfo") require(__dirname + '/commands/utilities/channelinfo.js')(message,args,client);
   if (command === "avatar") require(__dirname + '/commands/utilities/avatar.js')(message,args,client);
   if (command == 'roleslist') require(__dirname + '/commands/utilities/roleslist.js')(message);
   if (command == 'emojis') require(__dirname + '/commands/utilities/emojis.js')(message);
   if (command == 'ping') require(__dirname + '/commands/utilities/ping.js')(message,client);
 
-
-
-
-  
-// Развлекательные команды:
+// Развлекательные команды: Delete later
 if (command == 'poxyi') require(__dirname + '/commands/memes/poxyi.js')(message);
 if (command == 'flek$$') require(__dirname + '/commands/memes/flek$$.js')(message);
 if (command == 'firstly') require(__dirname + '/commands/memes/firstly.js')(message);
