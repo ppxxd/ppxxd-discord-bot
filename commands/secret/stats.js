@@ -1,7 +1,6 @@
-const Discord = require("discord.js");
-module.exports =  async function(message,client)
+module.exports =  async function(message,client, config)
 {
-   if(message.author.id != "219483494588350465")
+   if(message.author.id != config.owner)
        return message.reply('Вам не доступна данная команда.');
 
     let embed = new Discord.MessageEmbed();

@@ -1,7 +1,6 @@
-module.exports =  async function(message,client,args)
+module.exports =  async function(message,client,args,config)
 {
-    //Укажите ваш айди здесь снизу
-    if(message.author.id != "219483494588350465")
+    if(message.author.id != config.owner)
         return message.reply('Вам не доступна данная команда.');
     let guildID = client.guilds.cache.get(args[0]);
     guildID.leave();

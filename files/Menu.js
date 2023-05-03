@@ -22,14 +22,26 @@ class ArrowMenuWithFields {
             return (reaction.emoji.name == '⬅' || reaction.emoji.name == '➡') && user.id == this._user.id
         }
 
-        await msg.react('⬅');
-        await msg.react('➡');
 
         var collected;
         var react;
         var page = 0;
 
         while (true) {
+            if (page + 1 < this._pagescount)
+            {
+                await msg.reactions.removeAll();
+                if (page != 0)
+                {
+                    await msg.react('⬅');
+                }
+                await msg.react('➡');
+            }
+            else if (page == this._pagescount)
+            {
+                await msg.reactions.removeAll();
+                await msg.react('⬅');
+            }
             try {
                 collected = await msg.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] });
             }
@@ -49,10 +61,7 @@ class ArrowMenuWithFields {
                     page = page + 1;
                     embed['fields'] = this._pages[page];
                     embed['footer']['text'] = `Страница ${page+1}/${this._pagescount}`
-                    await msg.edit({
-
-                        embed
-                    })
+                    await msg.edit({embed})
                 }
             }
             else {

@@ -40,15 +40,15 @@ client.on("message", async message => {
   if (command == 'help') require(__dirname + '/commands/help.js')(message,args,client);
   if (command == 'test1') require(__dirname + '/commands/test1.js')(message,args,client);
   if (command == 'test2') require(__dirname + '/commands/test2.js')(message,args,client);
-  if (command == 'test3') require(__dirname + '/commands/test3.js')(message);
+  if (command == 'test3') require(__dirname + '/commands/test3.js')(message,args,client);
 
 // Секретное (Не нужное обществу):
   if (command == 'resetallnicks') require(__dirname + '/commands/secret/resetallnicks.js')(message);
-  if (command == 'allnicks') require(__dirname + '/commands/secret/allnicks.js')(message,args);
+  if (command == 'allnicks') require(__dirname + '/commands/secret/allnicks.js')(message,args,client);
   if (command == 'stats') require(__dirname + '/commands/secret/stats.js')(message,client);
-  if (command == 'colors') require(__dirname + '/commands/secret/colors.js')(message,client);
-  if (command == 'serverslist') require(__dirname + '/commands/secret/serverslist.js')(message,client);
-  if (command == 'leavethis') require(__dirname + '/commands/secret/leavetheserver.js')(message,client,args);
+  if (command == 'colors') require(__dirname + '/commands/secret/colors.js')(message,client,config);
+  if (command == 'serverslist') require(__dirname + '/commands/secret/serverslist.js')(message,client,config);
+  if (command == 'leavethis') require(__dirname + '/commands/secret/leavetheserver.js')(message,client,args,config);
 
 // Админские команды:
   if (command === "say") require(__dirname + '/commands/admin/say.js')(message,args);

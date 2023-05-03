@@ -1,7 +1,6 @@
-module.exports =  async function(message)
+module.exports =  async function(message,config)
 {
-  //Укажите свой айди здесь
-  if(message.author.id != "219483494588350465")
+  if(message.author.id != config.owner)
     return message.reply('Вам недоступна данная команда.');
 
  //Какие-то цвета не работают, да и копировать с текста можно, а с фото нет.

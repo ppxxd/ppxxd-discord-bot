@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 module.exports =  async function(message,args)
-{   //Здесь чистка сообщений по пользователю доступна только по упоминанию,
+{
+    //Здесь чистка сообщений по пользователю доступна только по упоминанию,
     // чтобы избежать ошибок от админов и т.д.
 
     if (!message.channel.permissionsFor(message.member).has("MANAGE_MESSAGES", false))
