@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear">
-      <change afterPath="$PROJECT_DIR$/commands/test1.js" afterDir="false" />
+    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="v0.1.1&#10;&#10;Пофикшена работа Menu.js: стрелки в меню работают корректно.&#10;В config.json добавлен ID владельца для корректной и эффективной работы некоторых команд.&#10;Немного багов пофикшено.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/clear.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/clear.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/allnicks.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/allnicks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/leavetheserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/leavetheserver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/resetallnicks.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/resetallnicks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/serverslist.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/serverslist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/secret/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/secret/stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/test123.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/test2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/testictuion.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/test3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/files/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppxxd.js" beforeDir="false" afterPath="$PROJECT_DIR$/ppxxd.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +127,8 @@
       <workItem from="1666434728438" duration="44000" />
       <workItem from="1667204388473" duration="32000" />
       <workItem from="1683066244150" duration="5471000" />
+      <workItem from="1683079992651" duration="257000" />
+      <workItem from="1685993422604" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear">
       <created>1652903413630</created>
@@ -147,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652903413630</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.1.1&#10;&#10;Пофикшена работа Menu.js: стрелки в меню работают корректно.&#10;В config.json добавлен ID владельца для корректной и эффективной работы некоторых команд.&#10;Немного багов пофикшено.">
+      <created>1683080055130</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683080055130</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -201,7 +198,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear" />
+    <MESSAGE value="v0.1.1&#10;&#10;Пофикшена работа Menu.js: стрелки в меню работают корректно.&#10;В config.json добавлен ID владельца для корректной и эффективной работы некоторых команд.&#10;Немного багов пофикшено." />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1.1&#10;&#10;Пофикшена работа Menu.js: стрелки в меню работают корректно.&#10;В config.json добавлен ID владельца для корректной и эффективной работы некоторых команд.&#10;Немного багов пофикшено." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.js" />
