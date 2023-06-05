@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-//https://discord.com/oauth2/authorize?client_id=535798550181969920&permissions=0&scope=bot%20applications.commands
+
 client.on("ready", () => {
   { ws: { intents: Discord.Intents.ALL } }
   console.log(`\nБот запущен.\nСерверов: ${client.guilds.cache.size}\nКаналов: ${client.channels.cache.size}\nУчастников: ${client.users.cache.size}`);
