@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json" />
+    <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +127,8 @@
       <workItem from="1667204388473" duration="32000" />
       <workItem from="1683066244150" duration="5471000" />
       <workItem from="1683079992651" duration="257000" />
-      <workItem from="1685993422604" duration="335000" />
+      <workItem from="1685993422604" duration="643000" />
+      <workItem from="1685997461154" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear">
       <created>1652903413630</created>
@@ -161,7 +165,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685993619776</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997244356</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997244356</updated>
+    </task>
+    <task id="LOCAL-00007" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997307356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997307356</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997326743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997326743</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
