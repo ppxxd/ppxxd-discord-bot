@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ff325d-8b6a-4d71-af93-f26654f8cb51" name="Default Changelist" comment="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/commands/test1.js" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/commands/utilities/userinfo.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/commands/secret/allnicks.js" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/commands/secret/stats.js" root0="SKIP_INSPECTION" />
@@ -128,7 +127,7 @@
       <workItem from="1683066244150" duration="5471000" />
       <workItem from="1683079992651" duration="257000" />
       <workItem from="1685993422604" duration="643000" />
-      <workItem from="1685997461154" duration="61000" />
+      <workItem from="1685997461154" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="v0.1&#10;&#10;Пофикшен баг с неверным количеством участников при старте бота&#10;Пофикшен баг с неверным отображением участников в userinfo&#10;Пофикшен баг с тем, что в userinfo не было иконки в эмбеде&#10;Создана команда со списком всех серверов, где находится бот&#10;Создана команда для лива с определенного сервера&#10;Пофикшена проблема с иконками в help&#10;В userinfo добавлена поддержка поиска по нику/айди&#10;Добавлена поддержка спец. символов в нике в userinfo&#10;Код стал более читаемый&#10;Исправлена работа команд allnicks и resetallnicks: не работают на ботов, владельца и стоящих выше по иерархии ролей&#10;В avatar исправлен поиск по нику/айди&#10;Исправлена работа clear">
       <created>1652903413630</created>
@@ -186,7 +185,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685997326743</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997550297</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997550297</updated>
+    </task>
+    <task id="LOCAL-00010" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997604974</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997604974</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v0.1.1.1&#10;&#10;Небольшие поправки в коде и в config.json">
+      <created>1685997773227</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685997773227</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
