@@ -31,10 +31,6 @@ if (!category) return message.channel.send({embed: {
     {
       name: "UTILITIES",
       value: "`channelinfo`**,**`roleinfo`**,**`rolemembers`**,**`userinfo`**,**`serverinfo`**,**`avatar`**,**`roleslist`**,**`emojis`"
-    },
-    {
-      name: "FUN",
-      value: "`firstly`**,**`flek$$`**,**`poxyi`**,**`question`**,**`whoischop1k`**,**`anime`"
     }
   ],
   timestamp: new Date(),
@@ -43,7 +39,7 @@ if (!category) return message.channel.send({embed: {
     text: gname
   }
 }})
-if (category == "admin") return message.channel.send({embed: {
+if (category === "admin") return message.channel.send({embed: {
   color: message.member.displayColor,
   author: {
     name: 'Список админских команд:',
@@ -85,44 +81,7 @@ if (category == "admin") return message.channel.send({embed: {
     text: gname
   }
 }})
-if (category == "fun") return message.channel.send({embed: {
-  color: message.member.displayColor,
-  author: {
-    name: 'Список фановых команд:',
-    icon_url: user
-  },
-  fields: [{
-      name: "firstly",
-      value: "`Во первых...`"
-    },
-    {
-      name: "flek$$",
-      value: "`Призывает великого флексера`"
-    },
-    {
-      name: "poxyi",
-      value: "`Похуй` :candle: "
-    },
-    {
-      name: "question",
-      value: "`А вопрос то стоит...`"
-    },
-    {
-      name: "whoischop1k",
-      value: "`Кто же этот тип?`"
-    },
-    {
-      name: "anime",
-      value: "`Мнение анимеш...`"
-    }
-  ],
-  timestamp: new Date(),
-  footer: {
-    icon_url: sicon,
-    text: gname
-  }
-}})
-if (category == "utilities") return message.channel.send({embed: {
+if (category === "utilities") return message.channel.send({embed: {
   color: message.member.displayColor,
   author: {
     name: 'Список команд-утилит:',
@@ -167,7 +126,7 @@ if (category == "utilities") return message.channel.send({embed: {
     text: gname
   }
 }})
-if (category == "secret" && message.author.id == "219483494588350465") return message.delete().catch(O_o => { }) + message.author.send({embed: {
+if (category === "secret" && message.author.id === "219483494588350465") return message.delete().catch(O_o => { }) + message.author.send({embed: {
   color: message.member.displayColor,
   author: {
     name: 'Список секретных команд:',
@@ -183,16 +142,20 @@ if (category == "secret" && message.author.id == "219483494588350465") return me
       value: "`Сбрасывает все ники пользователей на сервере`"
     },
     {
-      name: "~meibibaby",
-      value: "`Лучше всех на свете`"
-    },
-    {
       name: "~stats",
       value: "`Статистика бота.`"
     },
     {
       name: "~colors",
       value: "`Цвета в блоках.`"
+    },
+    {
+      name: "~serverslist",
+      value: "`Выводит список серверов, на которых есть бот.`"
+    },
+    {
+      name: "~leavethis",
+      value: "`Выйти с выбранного сервера.`"
     }
   ],
   timestamp: new Date(),
@@ -201,5 +164,4 @@ if (category == "secret" && message.author.id == "219483494588350465") return me
     text: gname
   }
 }})
-if (category == "games") return message.channel.send('Эй, братан, не торопи события!')
 }
